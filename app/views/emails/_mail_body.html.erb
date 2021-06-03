@@ -1,0 +1,11 @@
+<h3><%= @email.object%></h3>
+<hr>
+<%= @email.body%>
+<br><br><br>
+<%= link_to "Supprimer", email_path(@email.id), method:'delete',confirm:"Etes vous sur ?", remote: true, class: "btn btn-danger mb-2"  %>
+
+
+<%= link_to "Marquer comme lu", email_path(@email,read: false), method:'put', remote: true,id:'btn-no-read', class: "btn btn-info mb-2"%>
+
+
+
